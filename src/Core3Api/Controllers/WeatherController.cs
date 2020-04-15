@@ -6,6 +6,8 @@ using System.Linq;
 
 namespace Core3Api.Controllers
 {    
+    [ApiController]
+    [Route("[controller]")]
     public class WeatherController : ControllerBase
     {       
         private static readonly string[] Summaries = new[]
