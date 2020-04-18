@@ -1,5 +1,5 @@
 ENV EmailServer=127.0.0.1
-ENV ConnectionString= Data Source=127.0.0.1,1500;Initial Catalog=Test.Database;
+ENV ConnectionString= Server=(DESCRIPTION = (ADDRESS = (PROTOCOL=TCP) (HOST=LOCALHOST) (PORT=1521)) (CONNECT_DATA= (SERVER=DEDICATED) (SERVICE_NAME=xe.oracle.docker))); direct=true; User Id=system; Password=oracle;
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /build
