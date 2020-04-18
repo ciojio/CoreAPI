@@ -15,7 +15,9 @@ namespace Core3Api.Controllers
 
         public IActionResult Get()
         {
-            return Ok(_messageService.GetMessage());
+            string emailSvr = Environment.GetEnvironmentVariable("EmailServer"); 
+            string connectionString = Environment.GetEnvironmentVariable("ConnectionString");
+            return Ok(emailSvr+" "+connectionString);
         }
     }
 }
