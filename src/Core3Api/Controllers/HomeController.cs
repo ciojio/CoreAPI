@@ -18,7 +18,8 @@ namespace Core3Api.Controllers
         {
             string emailSvr = Environment.GetEnvironmentVariable("EmailServer"); 
             string connectionString = Environment.GetEnvironmentVariable("ConnectionString");
-            return Ok("hello world " + emailSvr+" "+connectionString);
+			string OC_Evariable = Environment.GetEnvironmentVariable("OC_HC_URL");
+            return Ok("hello world " + emailSvr+" "+connectionString+" "+OC_Evariable);
         }
     }
 }
