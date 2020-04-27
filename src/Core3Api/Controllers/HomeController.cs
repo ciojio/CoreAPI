@@ -19,6 +19,7 @@ namespace Core3Api.Controllers
         {
             string emailSvr = Environment.GetEnvironmentVariable("EmailServer"); 
             string connectionString = Environment.GetEnvironmentVariable("ConnectionString");
+<<<<<<< HEAD
             connectionString = "User Id = scott; Password = 12345; Data Source = localhost:1521/orcl;";
 
             using (OracleConnection connection = new OracleConnection(connectionString))
@@ -35,6 +36,10 @@ namespace Core3Api.Controllers
             }
 
             return Ok("hello world " + emailSvr+" "+connectionString);
+=======
+			string OC_Evariable = Environment.GetEnvironmentVariable("OC_HC_URL");
+            return Ok("hello world " + emailSvr+" "+connectionString+" "+OC_Evariable);
+>>>>>>> 4a1ab80770ebab1c23f5c45a18ac83348b035139
         }
     }
 }
