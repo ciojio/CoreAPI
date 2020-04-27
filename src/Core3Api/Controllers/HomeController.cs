@@ -19,7 +19,7 @@ namespace Core3Api.Controllers
         {
             string emailSvr = Environment.GetEnvironmentVariable("EmailServer"); 
             string connectionString = Environment.GetEnvironmentVariable("ConnectionString");
-
+            string name = "";
             //connectionString = "User Id = scott; Password = 12345; Data Source = localhost:1521/orcl;";
 
             using (OracleConnection connection = new OracleConnection(connectionString))
@@ -31,11 +31,11 @@ namespace Core3Api.Controllers
                 OracleDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    string name = reader.GetString(1);
+                    name = reader.GetString(1);
                 }
             }
 
-            return Ok("hello world " + emailSvr+" "+connectionString);
+            return Ok("hello world "+ name +" " + emailSvr+" "+connectionString);
 
 			//string OC_Evariable = Environment.GetEnvironmentVariable("OC_HC_URL");
             //return Ok("hello world " + emailSvr+" "+connectionString+" "+OC_Evariable);
