@@ -41,7 +41,7 @@ namespace Core3Api.Controllers
             }
             catch(Exception ex)
             {
-                error_message = ex.Message.ToString() + " #### " + ex.InnerException.Message.ToString();
+                error_message = ex.Message.ToString();
             }
             
 
