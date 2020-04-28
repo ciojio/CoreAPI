@@ -1,4 +1,4 @@
-﻿using Core3Api.Services;
+using Core3Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using Oracle.ManagedDataAccess.Client;
@@ -22,6 +22,7 @@ namespace Core3Api.Controllers
             string name = "";
             //connectionString = "User Id = scott; Password = 12345; Data Source = localhost:1521/orcl;";
 
+            /*
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
                 string queryString = "Select * from emp";
@@ -33,7 +34,7 @@ namespace Core3Api.Controllers
                 {
                     name = reader.GetString(1);
                 }
-            }
+            }*/
 
             return Ok("hello world "+ name +" " + emailSvr+" "+connectionString);
 
