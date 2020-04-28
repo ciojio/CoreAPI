@@ -11,7 +11,7 @@ WORKDIR /app
 
 ENV EmailServer=127.0.0.1
 ENV TZ=America/New_York
-ENV ConnectionString=User\ Id=scott;Password=12345;Data\ Source=192.168.137.1:1521/orcl;
+ENV ConnectionString=User\ Id=scott;Password=12345;Data\ Source=192.168.137.1:1521/orcl.kbzbank.com.mm;
 
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "Core3Api.dll"]
