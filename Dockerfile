@@ -10,6 +10,7 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS final
 WORKDIR /app
 
 ENV EmailServer=127.0.0.1
+ENV TZ=America/New_York
 ENV ConnectionString=User\ Id=scott;Password=12345;Data\ Source=192.168.137.1:1521/orcl;
 
 COPY --from=build /app .
