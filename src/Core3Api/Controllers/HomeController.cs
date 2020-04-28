@@ -30,6 +30,10 @@ namespace Core3Api.Controllers
                     string queryString = "Select * from emp";
                     OracleCommand command = new OracleCommand(queryString, connection);
                     command.Connection.Open();
+                    OracleGlobalization info = command.Connection.GetSessionInfo(); //this.Connection.GetSessionInfo();
+                    info.TimeZone = "America/New_York";
+                    command.Connection.SetSessionInfo(info);
+                    //this.Connection.SetSessionInfo(info);
                     //command.ExecuteNonQuery();
                     OracleDataReader reader = command.ExecuteReader();
                     while (reader.Read())
